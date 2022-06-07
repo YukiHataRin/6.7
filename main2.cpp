@@ -42,14 +42,14 @@ public:
 
     Solution operator-(const Solution &a) const 
     {
-        unsigned long long va = 0, vb = a.y / llgcd(y, a.y) * y;
+        long long va = 0, vb = a.y / llgcd(y, a.y) * y;
         va = vb / y * x - vb / a.y * a.x;
         return Solution(va, vb);
     }
 
     Solution operator+(const Solution &a) const 
     {
-        unsigned long long va = 0, vb = a.y / llgcd(y, a.y) * y;
+        long long va = 0, vb = a.y / llgcd(y, a.y) * y;
         va = vb / y * x + vb / a.y * a.x;
         return Solution(va, vb);
     }
