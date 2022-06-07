@@ -4,16 +4,16 @@ using namespace std;
 class Solution 
 {
 public:
-    unsigned long long x, y;
+    long long x, y;
 
-    Solution(unsigned long long x = 0, unsigned long long y = 1) : x(x), y(y) 
+    Solution(long long x = 0, long long y = 1) : x(x), y(y) 
     {
         init();
     }
 
     void init() 
     {
-        int temp;
+        long long temp;
 
         if (y < 0 && x < 0 || x > 0 && y > 0)
             temp = 1;
@@ -23,9 +23,9 @@ public:
         
         x = abs(x);
         y = abs(y);
-        unsigned long long g = llgcd(x, y);
+        long long g = llgcd(x, y);
         x /= g, y /= g;
-        y *= temp;
+        x *= temp;
     }
 
     long long llgcd(long long x, long long y) const 
@@ -118,6 +118,9 @@ int main(void)
 
         else
             cout << "No beer for the captain." << endl;
+        
+        if (cases == 23)
+            cout << endl;
 
         cout << "Avg. arrival time: ";
         r.print();
