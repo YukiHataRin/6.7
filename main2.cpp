@@ -119,9 +119,6 @@ int main(void)
         else
             cout << "No beer for the captain." << endl;
         
-        if (cases == 23)
-            cout << endl;
-
         cout << "Avg. arrival time: ";
         r.print();
     }
